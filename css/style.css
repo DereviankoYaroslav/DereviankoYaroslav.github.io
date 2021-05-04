@@ -1,0 +1,274 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F7FA;
+}
+
+/*main content section*/
+/*about me section*/
+
+.about-me{
+    margin-bottom: 40px;
+}
+
+.profession{
+    font-style: normal;
+    font-weight: bold;
+    line-height: 17px;  
+    font-size: 14px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.my-name{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+.about-me-description{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    width: 500px;
+}
+
+/*projects section*/
+
+.my-projects-list{
+    padding: 0 0 0 18px;
+}
+
+.list-numeric{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+}
+
+.list-item-link{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+}
+.list-item-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    margin-left: 5px;
+}
+
+.list-item-brackets{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+}
+
+.my-projects{
+    margin: 0 0 50px 0;
+}
+
+
+/*work experience section*/
+
+.w-e-list{
+    padding: 0 0 0 18px;
+    color: #595959;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.projects-items{
+    color: #595959;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.company-name{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FB6D3A;
+    font-style: normal;
+}
+
+.my-work-position{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    margin: 0 0 10px 0;
+}
+
+.work-time{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #A8A8A8;
+    margin-bottom: 8px;
+}
+
+.wt-line{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+}
+
+.companies{
+    margin: 0 0 20px 0;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1200px;
+    background-color: #fff;
+    margin: 40px auto;
+    box-shadow: 6px 6px 200px #1E2939;
+}
+
+.main-content{
+    padding: 100px 90px 100px 90px;
+}
+
+.main-content-titles{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+/*sidebar section*/
+
+.sidebar-section{
+    background-color:#1E2939;
+    width: 370px;
+    padding: 40px 0px;
+}
+
+.picture{
+    width: 370px;
+}
+
+.contacts-section{
+    margin: 50px 0 0 40px;
+}
+
+.tech-skill-section{
+    margin: 50px 0 0 40px;
+}
+
+.soft-skills-section{
+    margin: 50px 0 0 40px;
+}
+
+.sidebar-section-titles{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/*contacts section*/
+.contact-type{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    margin-right: 8px;
+}
+
+.contact-link{
+    color: #878D96;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/*techskills section*/
+.tech-skills-list{
+    padding: 0 0 0 18px;
+}
+
+.tech-skills-item{
+    color: #FB6D3A;
+    padding: 0 0 5px 0;
+}
+
+.tech-skills-item-text{
+    color: #fff;
+}
+
+/*soft skills section*/
+.soft-skills-list{
+    padding: 0 0 0 18px;
+}
+
+.soft-skills-item{
+    color: #FB6D3A;
+    padding: 0 0 5px 0;
+}
+
+.soft-skills-item-text{
+    color: #fff;
+}
+
+.my-education{
+    margin: 45px 0 0 0;
+}
+
+.main-content-education{
+    margin: 0 0 0 0;
+}
+
+.university{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FB6D3A;
+    margin: 10px 0 12px 0;
+}
+
+.univ-spec{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 0 0;
+}
+
+.study-time{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #A8A8A8;
+    margin: 12px 0 0 0;
+}
+
