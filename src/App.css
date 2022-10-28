@@ -1,0 +1,285 @@
+.App {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background:rgb(255, 200, 0);
+}
+
+
+/* ---- Card Component ---- */
+
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.parent {
+  /* height:100vh; */
+  align-items: center;
+  justify-content: acenter;
+}
+
+.child {
+  width: 99%; 
+  height: auto;
+  position: relative;
+  margin-top: 20px;
+}
+
+.my-card{
+  border-radius: 20px;
+  background-color: #132a58c6;
+}
+
+.my-card:hover {
+  cursor: pointer;
+}
+
+.card-body{
+  width: 100%;
+  margin-top: 10%;
+  height: 200px;
+  margin-bottom: 10%;
+}
+
+.card-content {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 100px;
+  margin-right: 0px;
+  padding-top: 25px;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+/* -------- */
+
+/* ---- Navigation ---- */
+
+.dropdown-menu {
+  background-color: #414245fc;
+  text-align: center;
+  margin-top: 7px;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+a.nav-item{
+  color: aliceblue;
+}
+
+a.dropdown-item:hover {
+  background-color:rgba(255, 200, 0, 0.305);
+}
+
+.nav {
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  height: 50px;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #414245fc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.new-nav {
+  background-color: #414245fc;
+}
+
+.logo{
+  text-decoration: none !important;
+}
+
+.nav-item{
+  text-decoration: none !important;
+}
+
+/* --------- */
+
+/* ---- Arrows/Buttons ---- */
+
+.sort-button {
+  background-color: #ffffffc6;
+  border-radius: 20px;
+  width: 60%;
+  display: block;
+  justify-content: center;
+}
+
+.sort-button:hover {
+  cursor: pointer;
+}
+
+.shuffle {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.toggler:hover {
+  cursor: pointer;
+}
+
+.arrow {
+  background-color: #ffffffc6;
+  border-radius: 20px;
+  width: 80%;
+  display: block;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow.max {
+  flex: 1;
+}
+
+.icon {
+  width: 100%;
+}
+
+/* -------- */
+
+/* ---- Footer ---- */
+
+.footer {
+  display: flex;
+  height: 50px;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #414245fc;
+  display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+}
+
+/* -------- */
+
+/* ---- Pages Content ---- */
+
+.welcome-page{
+  height: 100vh;
+}
+
+
+.content {
+  margin-top: 25px;
+}
+
+/* .lesson1 {
+  margin-top: px;
+} */
+
+.lesson-next {
+  padding-top: 20px;
+}
+
+/* .lesson-next:hover{
+  cursor: pointer;
+} */
+
+.hidden {
+  display: none;
+}
+
+.cards-in-lessons {
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.bottom-line {
+  margin-top: 200px;
+}
+
+/* -------- */
+
+/* ---- Images Cards ----  */
+
+.card-img-body{
+  width: 100%;
+  margin-top: 10%;
+  height: auto;
+  margin-bottom: 10%;
+}
+
+/* ---- Tests Cards Content ---- */
+
+.question {
+  margin-top: 25px;
+  font-size: 50px;
+}
+
+.variant {
+  background-color: #132a58c6;
+  border-radius: 10px;
+  width: auto;
+  height: 50px;
+  display: block;
+  justify-content: center;
+  padding-top: 10px;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.congrats {
+  margin-top: 25px;
+}
+
+/* -------- */
+
+.halloween-tests{
+  background-color: #ffffffc6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+
