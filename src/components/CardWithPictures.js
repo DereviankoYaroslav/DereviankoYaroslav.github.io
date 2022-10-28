@@ -4,12 +4,15 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faArrowRight, faShuffle} from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faArrowRight, faChevronDown, faChevronUp, faShuffle} from '@fortawesome/free-solid-svg-icons'
 const arrowRight = <FontAwesomeIcon className='icon' icon={faArrowRight} />
 const arrowLeft = <FontAwesomeIcon className='icon' icon={faArrowLeft} />
 const shuffleIcon = <FontAwesomeIcon className='icon' icon={faShuffle} />
 
 function CardWithPictures(props){
+
+    const downArrow = <FontAwesomeIcon className={'toggle-icon-' + props.words.topic} icon={faChevronDown} />
+    const upArrow = <FontAwesomeIcon className={'toggle-icon-' + props.words.topic +' hidden'} icon={faChevronUp} />
 
     const [counter, setCounter] = useState(0);
     const [content, setContent] = useState(props.words.imgs[counter]);
@@ -104,6 +107,10 @@ function CardWithPictures(props){
         myEl.classList.toggle('hidden');
         console.log(myEl);
         variantsShuffle(counter);
+        let myToggle = document.getElementsByClassName('toggle-icon-' + props.words.topic);
+        for (let i = 0; i < myToggle.length; i++){
+            myToggle[i].classList.toggle('hidden');
+        }
     };
     
     const colorChanger = (e) => {
@@ -148,7 +155,7 @@ function CardWithPictures(props){
     return (
         <div className='parent'>
             <div>
-                <h2 className={'lesson'+props.counter + ' lesson-next'} onClick={() => lessonsBar(props.words.topic.toLowerCase().split(' ').join('-'))}><span className='toggler'>{props.words.topic}</span></h2>
+                <h2 className={'lesson'+props.counter + ' lesson-next'} onClick={() => lessonsBar(props.words.topic.toLowerCase().split(' ').join('-'))}><span className='toggler'>{props.words.topic}{downArrow}{upArrow}</span></h2>
             </div>
             <div className='center-card child hidden' id={props.words.topic.toLowerCase().split(' ').join('-')}>
                 <Row xs='12' className='justify-content-center text-center'>

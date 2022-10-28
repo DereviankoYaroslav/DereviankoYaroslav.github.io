@@ -4,16 +4,19 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faArrowRight, faShuffle} from '@fortawesome/free-solid-svg-icons'
-const arrowRight = <FontAwesomeIcon className='icon' icon={faArrowRight} />
-const arrowLeft = <FontAwesomeIcon className='icon' icon={faArrowLeft} />
-const shuffleIcon = <FontAwesomeIcon className='icon' icon={faShuffle} />
+import { faArrowDown, faArrowLeft, faArrowRight, faChevronDown, faChevronUp, faShuffle} from '@fortawesome/free-solid-svg-icons'
 
 function CardComponent(props){
 
     const [counter, setCounter] = useState(0);
     const [content, setContent] = useState(props.words.words[counter].eng);
     const [check, setCheck] = useState(true);
+
+    const arrowRight = <FontAwesomeIcon className='icon' icon={faArrowRight} />
+    const arrowLeft = <FontAwesomeIcon className='icon' icon={faArrowLeft} />
+    const shuffleIcon = <FontAwesomeIcon className='icon' icon={faShuffle} />
+    const downArrow = <FontAwesomeIcon className={'toggle-icon-' + props.words.lesson} icon={faChevronDown} />
+    const upArrow = <FontAwesomeIcon className={'toggle-icon-' + props.words.lesson +' hidden'} icon={faChevronUp} />
 
     const shuffleArray = () => {
         for (let i = props.words.words.length - 1; i > 0; i--) {
@@ -98,12 +101,16 @@ function CardComponent(props){
         let myEl = document.getElementById(id);
         myEl.classList.toggle('hidden');
         console.log(myEl);
+        let myToggle = document.getElementsByClassName('toggle-icon-' + props.words.lesson);
+        for (let i = 0; i < myToggle.length; i++){
+            myToggle[i].classList.toggle('hidden');
+        }
     };
 
     return (
         <div className='parent'>
             <div>
-                <h2 className={'lesson'+props.words.lesson + ' lesson-next'} onClick={() => lessonsBar(props.words.lesson)}><span className='toggler'>Lesson {props.words.lesson}</span></h2>
+                <h2 className={'lesson'+props.words.lesson + ' lesson-next'} onClick={() => lessonsBar(props.words.lesson)}><span className='toggler'>Lesson {props.words.lesson}{downArrow}{upArrow}</span></h2>
             </div>
             <div className='center-card child hidden' id={props.words.lesson}>
                 <Row xs='12' className='justify-content-center text-center'>
