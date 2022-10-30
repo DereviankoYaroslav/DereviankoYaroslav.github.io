@@ -78,12 +78,12 @@ function TableGameComponent(){
         <div className='game-div'>
             <h2 className='lesson-next' onClick={lessonsBar}>Table Game{downArrow}{upArrow}</h2>
             <div className='game hidden'>
-                <img className='field' src={field}></img>
+                <img className='field' alt='field' src={field}></img>
                 <img id='fishka1' className='my-player' src={player1} alt='player1' onMouseDown={playerControl}></img>
                 <img id='fishka2' className='my-player' src={player2} alt='player2' onMouseDown={playerControl}></img>
                 <button className='throw-button' onClick={throwDice}>Throw the cube</button>
                 <div className='cubes hidden'>
-                    <img className='cube' src={die1}/>
+                    <img className='cube' alt='cube' src={die1}/>
                 </div>
             </div>
         </div>
