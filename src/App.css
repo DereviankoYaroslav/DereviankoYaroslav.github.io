@@ -328,6 +328,9 @@ a.dropdown-item:hover {
   margin-top: 50px;
 }
 
+.hidden {
+  display: none;
+}
 
 
 
