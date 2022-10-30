@@ -43,7 +43,7 @@ function App() {
       </Routes>
       </div>
       <nav className='footer'>
-        <h3>Some Contacts Info</h3>
+        <h4>Some Contacts Info</h4>
       </nav>
     </div>
   );

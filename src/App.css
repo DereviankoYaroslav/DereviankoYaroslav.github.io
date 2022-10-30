@@ -275,11 +275,60 @@ a.dropdown-item:hover {
 
 /* -------- */
 
+/* ---- Halloween ---- */
+
 .halloween-tests{
   background-color: #ffffffc6;
   border-radius: 10px;
   padding: 10px;
 }
+
+.my-player {
+  width: 100px;
+  height: 100px;
+  left: 50px;
+  display: inline-block;
+  position: absolute;
+}
+
+.game-div {
+  width: 100%;
+}
+
+.field {
+  width: 100%;
+  height: auto;
+}
+
+.cubes {
+  display: flex;
+  justify-content: center;
+}
+
+.cube {
+  margin-top: 10px;
+  width: auto;
+}
+
+.halloween h2, h3 {
+  color:#ff9500
+}
+
+.throw-button {
+  margin-top: 25px;
+  background-color:#ff950000;
+  color:#ff9500;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: solid 4px #ff9500;
+}
+
+.halloween hr {
+  margin-top: 50px;
+}
+
+
 
 
 

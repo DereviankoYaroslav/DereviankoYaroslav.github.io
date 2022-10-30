@@ -1,5 +1,6 @@
 import CardComponent from "./CardComponent";
 import CardWithPictures from "./CardWithPictures";
+import TableGameComponent from "./TableGameComponent";
 
 function HalloweenComponent(){
     const wordsToLearn1 = {
@@ -56,6 +57,7 @@ function HalloweenComponent(){
         <div className="halloween">
             <CardComponent words={wordsToLearn1}/>
             <CardWithPictures words={halloween} counter={counter=counter+1} variants={variants1}/>
+            <TableGameComponent />
         </div>
     );
 }
