@@ -6,6 +6,7 @@ import side3 from '../images/Alea_3.png';
 import side4 from '../images/Alea_4.png';
 import side5 from '../images/Alea_5.png';
 import side6 from '../images/Alea_6.png';
+import field from '../images/field_halloween.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
@@ -18,8 +19,6 @@ function TableGameComponent(){
 
     const dice = [side1, side2, side3, side4, side5, side6];
     const [die1, setDie1] = useState();
-
-    const field = 'https://previews.123rf.com/images/iimages/iimages1411/iimages141100471/33852282-zoo-juego-de-mesa-tem%C3%A1tica-con-los-n%C3%BAmeros.jpg';
 
     const throwDice = () => {
         setDie1(dice[Math.floor(Math.random()*6)]);
@@ -81,7 +80,9 @@ function TableGameComponent(){
                 <img className='field' alt='field' src={field}></img>
                 <img id='fishka1' className='my-player' src={player1} alt='player1' onMouseDown={playerControl}></img>
                 <img id='fishka2' className='my-player' src={player2} alt='player2' onMouseDown={playerControl}></img>
-                <button className='throw-button' onClick={throwDice}>Throw the cube</button>
+                <div>
+                    <button className='throw-button' onClick={throwDice}>Throw the cube</button>
+                </div>
                 <div className='cubes hidden'>
                     <img className='cube' alt='cube' src={die1}/>
                 </div>
