@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4151b91.css",
-    "main.js": "/static/js/main.f64c9580.js",
+    "main.css": "/static/css/main.85e16c18.css",
+    "main.js": "/static/js/main.baa56949.js",
+    "static/media/field_halloween.png": "/static/media/field_halloween.7d8b1f64d8369424c0c6.png",
     "static/media/player1.png": "/static/media/player1.84a0117064933a318699.png",
     "static/media/player2.png": "/static/media/player2.7f89cdad55414eaa6d47.png",
     "index.html": "/index.html",
-    "main.c4151b91.css.map": "/static/css/main.c4151b91.css.map",
-    "main.f64c9580.js.map": "/static/js/main.f64c9580.js.map"
+    "main.85e16c18.css.map": "/static/css/main.85e16c18.css.map",
+    "main.baa56949.js.map": "/static/js/main.baa56949.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4151b91.css",
-    "static/js/main.f64c9580.js"
+    "static/css/main.85e16c18.css",
+    "static/js/main.baa56949.js"
   ]
 }
