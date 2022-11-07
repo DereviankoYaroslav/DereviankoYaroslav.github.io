@@ -6,13 +6,16 @@ import side3 from '../images/Alea_3.png';
 import side4 from '../images/Alea_4.png';
 import side5 from '../images/Alea_5.png';
 import side6 from '../images/Alea_6.png';
-import field from '../images/field_halloween.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 
 
-function TableGameComponent(){
+function TableGameComponent(props){
+
+    if(!props.isHW){
+        document.body.style.backgroundImage = 'none';
+    }
 
     const downArrow = <FontAwesomeIcon className={'toggle-icon-game'} icon={faChevronDown} />
     const upArrow = <FontAwesomeIcon className={'toggle-icon-game hidden'} icon={faChevronUp} />
@@ -77,7 +80,7 @@ function TableGameComponent(){
         <div className='game-div'>
             <h2 className='lesson-next' onClick={lessonsBar}>Table Game{downArrow}{upArrow}</h2>
             <div className='game hidden'>
-                <img className='field' alt='field' src={field}></img>
+                <img className='field' alt='field' src={props.field}></img>
                 <img id='fishka1' className='my-player' src={player1} alt='player1' onMouseDown={playerControl}></img>
                 <img id='fishka2' className='my-player' src={player2} alt='player2' onMouseDown={playerControl}></img>
                 <div>

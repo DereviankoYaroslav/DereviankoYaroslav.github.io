@@ -1,6 +1,7 @@
 import CardComponent from "./CardComponent";
 import CardWithPictures from "./CardWithPictures";
 import TableGameComponent from "./TableGameComponent";
+import field_halloween from '../images/field_halloween.png'
 
 function HalloweenComponent(){
     const wordsToLearn1 = {
@@ -73,6 +74,10 @@ function HalloweenComponent(){
         ukr: 'Повний місяць'},
         {eng: 'Harvest',
         ukr: 'Врожай'},
+        {eng: 'Candle',
+        ukr: 'Свічка'},
+        {eng: 'Celebrate',
+        ukr: 'Святкувати'}
       ],
       lesson: 'about Halloween'};
 
@@ -175,7 +180,7 @@ function HalloweenComponent(){
         <div className="halloween">
             <CardComponent words={wordsToLearn1}/>
             <CardWithPictures words={halloween} counter={counter=counter+1} variants={variants1}/>
-            <TableGameComponent />
+            <TableGameComponent field={field_halloween} isHW={true}/>
         </div>
     );
 }

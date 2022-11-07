@@ -4,10 +4,19 @@ import Homepage from './components/Homepage';
 import LessonsComponent from './components/LessonsComponent';
 import PictureTestComponent from './components/PicturesTestComponent';
 import HalloweenComponent from './components/HalloweenComponent';
+import TableGameComponent from './components/TableGameComponent';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import field_sonic from './images/field_sonic.jpg';
+import WordSearchComponent from './components/WordSearchComponent';
 
 
 function App() {
+
+  const words = {
+    letters: ['T', 'E', 'S', 'T'],
+    positions: [23,33,43,53],
+    answears: ['test']
+  }
 
   return (
     <div className="App">
@@ -25,6 +34,8 @@ function App() {
               <NavDropdown.Item><Link to='/learning-cards' className='nav-item'>Learning Cards</Link></NavDropdown.Item>
               <NavDropdown.Item><Link to='/pictures-tests' className='nav-item'>Tests with Pictures</Link></NavDropdown.Item>
               <NavDropdown.Item><Link to='/halloween' className='nav-item'>Halloween</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to='/table-game' className='nav-item'>Table Game</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to='/words-searching' className='nav-item'>Words Searching</Link></NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -40,6 +51,8 @@ function App() {
         <Route path='/learning-cards' element={<LessonsComponent />} />
         <Route path='/pictures-tests' element={<PictureTestComponent />} />
         <Route path='/halloween' element={<HalloweenComponent />} />
+        <Route path='/table-game' element={<TableGameComponent field={field_sonic}/>} />
+        <Route path='/words-searching' element={<WordSearchComponent words={words}/>} />
       </Routes>
       </div>
       <nav className='footer'>
