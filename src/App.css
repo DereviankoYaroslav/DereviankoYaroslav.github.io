@@ -378,6 +378,23 @@ a.dropdown-item:hover {
   background-color: #1471fc;
 }
 
+.words-search h2, h3 {
+  color:#000000
+}
+
+.choosen-words{
+  margin-top: 25px;
+}
+
+.check{
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffffffc6;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 
 
 
