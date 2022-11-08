@@ -13,7 +13,7 @@ import WordSearchComponent from './components/WordSearchComponent';
 function App() {
 
   const words = {
-    wordsToFind: ['Test', 'Hello'],
+    wordsToFind: ['Test', 'Hello', 'Bye', 'Good'],
     letters: ['T', 'E', 'S', 'T', 'H', 'E', 'L', 'L', 'O'],
     positions: [23,33,43,53, 91, 92, 93, 94, 95],
     sizeX: 10,

@@ -29,11 +29,17 @@ function WordSearchComponent(props){
         //let wordsToFind = props.words.wordsToFind.toString().split(',').join('').toUpperCase();
         let wordsToFind = props.words.wordsToFind;
         let wordsLetters = Array.from(wordsToFind);
-        console.log(wordsLetters);
+        let myLetters = wordsLetters.toString().split(',').join('');
+        console.log(myLetters);
         let myH = document.getElementsByClassName('letter');
         let numArr = [];
         let innerNumb = [];
+        let checkArr = [];
+        let finalArr = [];
+        let checker = true;
         wordsLetters.forEach((element) => {
+            do {
+            innerNumb = [];
             let firstIndex = Math.floor(Math.random()*(props.words.sizeX*props.words.sizeY));
             if(firstIndex<((props.words.sizeX*props.words.sizeY)-element.length*props.words.sizeX)){
                 myH[firstIndex].innerHTML = element[0].toUpperCase();
@@ -41,6 +47,17 @@ function WordSearchComponent(props){
                 console.log(firstIndex)
                 for(let k = 1; k < element.length; k++){
                     firstIndex+=props.words.sizeX;
+                    innerNumb[k] = firstIndex;
+                    myH[firstIndex].innerHTML = element[k].toUpperCase();
+                }
+            }
+            else if (firstIndex>((props.words.sizeX*props.words.sizeY)-element.length)){
+                firstIndex -= element.length;
+                myH[firstIndex].innerHTML = element[0].toUpperCase();
+                innerNumb[0] = firstIndex;
+                console.log(firstIndex)
+                for(let k = 1; k < element.length; k++){
+                    firstIndex+=1;
                     innerNumb[k] = firstIndex;
                     myH[firstIndex].innerHTML = element[k].toUpperCase();
                 }
@@ -55,18 +72,100 @@ function WordSearchComponent(props){
                     myH[firstIndex].innerHTML = element[k].toUpperCase();
                 }
             }
+            checkArr = Array.from(numArr.toString().split(','),Number);
+            console.log(numArr);
+            console.log(element.length);
+            console.log(innerNumb);
             numArr+=innerNumb;
+            finalArr = Array.from(new Set(numArr.toString().split(','),Number));
+            console.log(finalArr);
+            console.log(numArr);
+            console.log(finalArr.length);
+            console.log(checkArr.length-1 + element.length);
+            if (finalArr.length === checkArr.length-1 + element.length){
+                checker = false;
+            } else {
+                let arrFrom = Array.from(numArr.toString().split(','),Number);
+                for(let l = 0; l<innerNumb.length; l++){
+                    arrFrom.pop();
+                }
+                numArr = arrFrom;
+                console.log('Inner n length' + innerNumb.length);
+                checker = true;
+            }
             numArr+=',';
+            }
+            while (checker);
+            console.log(myLetters.length);
         });
         numArr = numArr.slice(0,-1);
         console.log(numArr);
         setNumbers(numArr);
-        /* for(let k = 0; k < props.words.letters.length; k++){
-            let index = props.words.positions[k];
-            let value = props.words.letters[k];
-            myH[index].innerHTML = value;
-        } */
     };
+
+    /* const fillWords = () => {
+        //let wordsToFind = props.words.wordsToFind.toString().split(',').join('').toUpperCase();
+        let wordsToFind = props.words.wordsToFind;
+        let wordsLetters = Array.from(wordsToFind);
+        let myLetters = wordsLetters.toString().split(',').join();
+        console.log(wordsLetters);
+        let myH = document.getElementsByClassName('letter');
+        let numArr = [];
+        let innerNumb = [];
+        let checkArr = [];
+        let finalArr = [];
+        let checker = true;
+        wordsLetters.forEach((element) => {
+            do {
+            let firstIndex = Math.floor(Math.random()*(props.words.sizeX*props.words.sizeY));
+            if(firstIndex<((props.words.sizeX*props.words.sizeY)-element.length*props.words.sizeX)){
+                myH[firstIndex].innerHTML = element[0].toUpperCase();
+                innerNumb[0] = firstIndex;
+                console.log(firstIndex)
+                for(let k = 1; k < element.length; k++){
+                    firstIndex+=props.words.sizeX;
+                    innerNumb[k] = firstIndex;
+                    myH[firstIndex].innerHTML = element[k].toUpperCase();
+                }
+            }
+            else if (firstIndex>((props.words.sizeX*props.words.sizeY)-element.length)){
+                firstIndex -= element.length;
+                myH[firstIndex].innerHTML = element[0].toUpperCase();
+                innerNumb[0] = firstIndex;
+                console.log(firstIndex)
+                for(let k = 1; k < element.length; k++){
+                    firstIndex+=1;
+                    innerNumb[k] = firstIndex;
+                    myH[firstIndex].innerHTML = element[k].toUpperCase();
+                }
+            }
+            else {
+                myH[firstIndex].innerHTML = element[0].toUpperCase();
+                innerNumb[0] = firstIndex;
+                console.log(firstIndex)
+                for(let k = 1; k < element.length; k++){
+                    firstIndex+=1;
+                    innerNumb[k] = firstIndex;
+                    myH[firstIndex].innerHTML = element[k].toUpperCase();
+                }
+            }
+            checkArr = Array.from(numArr.toString().split(','),Number);
+            console.log(numArr);
+            console.log(element.length);
+            numArr+=innerNumb;
+            finalArr = Array.from(new Set(numArr.toString().split(','),Number));
+            console.log(finalArr);
+            console.log(finalArr.length);
+            console.log(checkArr.length-1 + element.length);
+            numArr+=',';
+            }
+            while (finalArr.length < myLetters.length);
+            console.log(myLetters.length);
+        });
+        numArr = numArr.slice(0,-1);
+        console.log(numArr);
+        setNumbers(numArr);
+    }; */
 
     const chooseElems = () => {
         let myLetters = document.getElementsByClassName('letter');
