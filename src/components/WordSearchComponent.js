@@ -10,6 +10,7 @@ function WordSearchComponent(props){
 
     const [answears, setAnswears] = useState(finalArr);
     const [done, setDone] = useState(false);
+    const [numbers, setNumbers] = useState([]);
 
     const fillTheField = () => {
         let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -25,12 +26,46 @@ function WordSearchComponent(props){
     };
 
     const fillWords = () => {
+        //let wordsToFind = props.words.wordsToFind.toString().split(',').join('').toUpperCase();
+        let wordsToFind = props.words.wordsToFind;
+        let wordsLetters = Array.from(wordsToFind);
+        console.log(wordsLetters);
         let myH = document.getElementsByClassName('letter');
-        for(let k = 0; k < props.words.letters.length; k++){
+        let numArr = [];
+        let innerNumb = [];
+        wordsLetters.forEach((element) => {
+            let firstIndex = Math.floor(Math.random()*(props.words.sizeX*props.words.sizeY));
+            if(firstIndex<((props.words.sizeX*props.words.sizeY)-element.length*props.words.sizeX)){
+                myH[firstIndex].innerHTML = element[0].toUpperCase();
+                innerNumb[0] = firstIndex;
+                console.log(firstIndex)
+                for(let k = 1; k < element.length; k++){
+                    firstIndex+=props.words.sizeX;
+                    innerNumb[k] = firstIndex;
+                    myH[firstIndex].innerHTML = element[k].toUpperCase();
+                }
+            }
+            else {
+                myH[firstIndex].innerHTML = element[0].toUpperCase();
+                innerNumb[0] = firstIndex;
+                console.log(firstIndex)
+                for(let k = 1; k < element.length; k++){
+                    firstIndex+=1;
+                    innerNumb[k] = firstIndex;
+                    myH[firstIndex].innerHTML = element[k].toUpperCase();
+                }
+            }
+            numArr+=innerNumb;
+            numArr+=',';
+        });
+        numArr = numArr.slice(0,-1);
+        console.log(numArr);
+        setNumbers(numArr);
+        /* for(let k = 0; k < props.words.letters.length; k++){
             let index = props.words.positions[k];
             let value = props.words.letters[k];
             myH[index].innerHTML = value;
-        }
+        } */
     };
 
     const chooseElems = () => {
@@ -53,7 +88,9 @@ function WordSearchComponent(props){
     const checker = () => {
         setDone(!done);
         let meAr = Array.from(answears);
-        let ansAr = Array.from(props.words.positions);
+        let ansAr = Array.from(new Set(numbers.toString().split(','),Number));
+        console.log(meAr);
+        console.log(ansAr);
         if(ansAr.sort().toString() === meAr.sort().toString()){
             document.getElementsByClassName('choosen-words')[0].innerHTML = 'Correct';
             console.log('good!');
