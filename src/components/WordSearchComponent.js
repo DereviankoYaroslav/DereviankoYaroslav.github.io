@@ -26,7 +26,6 @@ function WordSearchComponent(props){
     };
 
     const fillWords = () => {
-        //let wordsToFind = props.words.wordsToFind.toString().split(',').join('').toUpperCase();
         let wordsToFind = props.words.wordsToFind;
         let wordsLetters = Array.from(wordsToFind);
         let myLetters = wordsLetters.toString().split(',').join('');
@@ -42,34 +41,28 @@ function WordSearchComponent(props){
             innerNumb = [];
             let firstIndex = Math.floor(Math.random()*(props.words.sizeX*props.words.sizeY));
             if(firstIndex<((props.words.sizeX*props.words.sizeY)-element.length*props.words.sizeX)){
-                myH[firstIndex].innerHTML = element[0].toUpperCase();
                 innerNumb[0] = firstIndex;
                 console.log(firstIndex)
                 for(let k = 1; k < element.length; k++){
                     firstIndex+=props.words.sizeX;
                     innerNumb[k] = firstIndex;
-                    myH[firstIndex].innerHTML = element[k].toUpperCase();
                 }
             }
             else if (firstIndex>((props.words.sizeX*props.words.sizeY)-element.length)){
                 firstIndex -= element.length;
-                myH[firstIndex].innerHTML = element[0].toUpperCase();
                 innerNumb[0] = firstIndex;
                 console.log(firstIndex)
                 for(let k = 1; k < element.length; k++){
                     firstIndex+=1;
                     innerNumb[k] = firstIndex;
-                    myH[firstIndex].innerHTML = element[k].toUpperCase();
                 }
             }
             else {
-                myH[firstIndex].innerHTML = element[0].toUpperCase();
                 innerNumb[0] = firstIndex;
                 console.log(firstIndex)
                 for(let k = 1; k < element.length; k++){
                     firstIndex+=1;
                     innerNumb[k] = firstIndex;
-                    myH[firstIndex].innerHTML = element[k].toUpperCase();
                 }
             }
             checkArr = Array.from(numArr.toString().split(','),Number);
@@ -99,73 +92,14 @@ function WordSearchComponent(props){
             console.log(myLetters.length);
         });
         numArr = numArr.slice(0,-1);
-        console.log(numArr);
-        setNumbers(numArr);
+        let resultArr = Array.from(numArr.toString().split(','),Number);
+        console.log(resultArr);
+        setNumbers(resultArr);
+        for(let u = 0; u < resultArr.length; u++){
+            let index = resultArr[u];
+            myH[index].innerHTML = myLetters[u].toUpperCase();
+        }
     };
-
-    /* const fillWords = () => {
-        //let wordsToFind = props.words.wordsToFind.toString().split(',').join('').toUpperCase();
-        let wordsToFind = props.words.wordsToFind;
-        let wordsLetters = Array.from(wordsToFind);
-        let myLetters = wordsLetters.toString().split(',').join();
-        console.log(wordsLetters);
-        let myH = document.getElementsByClassName('letter');
-        let numArr = [];
-        let innerNumb = [];
-        let checkArr = [];
-        let finalArr = [];
-        let checker = true;
-        wordsLetters.forEach((element) => {
-            do {
-            let firstIndex = Math.floor(Math.random()*(props.words.sizeX*props.words.sizeY));
-            if(firstIndex<((props.words.sizeX*props.words.sizeY)-element.length*props.words.sizeX)){
-                myH[firstIndex].innerHTML = element[0].toUpperCase();
-                innerNumb[0] = firstIndex;
-                console.log(firstIndex)
-                for(let k = 1; k < element.length; k++){
-                    firstIndex+=props.words.sizeX;
-                    innerNumb[k] = firstIndex;
-                    myH[firstIndex].innerHTML = element[k].toUpperCase();
-                }
-            }
-            else if (firstIndex>((props.words.sizeX*props.words.sizeY)-element.length)){
-                firstIndex -= element.length;
-                myH[firstIndex].innerHTML = element[0].toUpperCase();
-                innerNumb[0] = firstIndex;
-                console.log(firstIndex)
-                for(let k = 1; k < element.length; k++){
-                    firstIndex+=1;
-                    innerNumb[k] = firstIndex;
-                    myH[firstIndex].innerHTML = element[k].toUpperCase();
-                }
-            }
-            else {
-                myH[firstIndex].innerHTML = element[0].toUpperCase();
-                innerNumb[0] = firstIndex;
-                console.log(firstIndex)
-                for(let k = 1; k < element.length; k++){
-                    firstIndex+=1;
-                    innerNumb[k] = firstIndex;
-                    myH[firstIndex].innerHTML = element[k].toUpperCase();
-                }
-            }
-            checkArr = Array.from(numArr.toString().split(','),Number);
-            console.log(numArr);
-            console.log(element.length);
-            numArr+=innerNumb;
-            finalArr = Array.from(new Set(numArr.toString().split(','),Number));
-            console.log(finalArr);
-            console.log(finalArr.length);
-            console.log(checkArr.length-1 + element.length);
-            numArr+=',';
-            }
-            while (finalArr.length < myLetters.length);
-            console.log(myLetters.length);
-        });
-        numArr = numArr.slice(0,-1);
-        console.log(numArr);
-        setNumbers(numArr);
-    }; */
 
     const chooseElems = () => {
         let myLetters = document.getElementsByClassName('letter');
