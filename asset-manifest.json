@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.3837eabe.css",
-    "main.js": "/static/js/main.24c37737.js",
+    "main.js": "/static/js/main.9a5d747b.js",
     "static/media/field_halloween.png": "/static/media/field_halloween.7d8b1f64d8369424c0c6.png",
     "static/media/field_sonic.jpg": "/static/media/field_sonic.46a575ff4ee0b29fc25f.jpg",
     "static/media/player1.png": "/static/media/player1.84a0117064933a318699.png",
     "static/media/player2.png": "/static/media/player2.7f89cdad55414eaa6d47.png",
     "index.html": "/index.html",
     "main.3837eabe.css.map": "/static/css/main.3837eabe.css.map",
-    "main.24c37737.js.map": "/static/js/main.24c37737.js.map"
+    "main.9a5d747b.js.map": "/static/js/main.9a5d747b.js.map"
   },
   "entrypoints": [
     "static/css/main.3837eabe.css",
-    "static/js/main.24c37737.js"
+    "static/js/main.9a5d747b.js"
   ]
 }
