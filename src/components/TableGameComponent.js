@@ -17,15 +17,15 @@ function TableGameComponent(props){
         document.body.style.backgroundImage = 'none';
     }
 
-    const downArrow = <FontAwesomeIcon className={'toggle-icon-game'} icon={faChevronDown} />
-    const upArrow = <FontAwesomeIcon className={'toggle-icon-game hidden'} icon={faChevronUp} />
+    const downArrow = <FontAwesomeIcon className={'toggle-icon-game'+props.counter} icon={faChevronDown} />
+    const upArrow = <FontAwesomeIcon className={'toggle-icon-game'+props.counter+' hidden'} icon={faChevronUp} />
 
     const dice = [side1, side2, side3, side4, side5, side6];
     const [die1, setDie1] = useState();
 
     const throwDice = () => {
         setDie1(dice[Math.floor(Math.random()*6)]);
-        let myGame = document.getElementsByClassName('cubes');
+        let myGame = document.getElementsByClassName('cubes'+props.counter);
         myGame[0].classList.remove('hidden');
     }
     
@@ -67,10 +67,10 @@ function TableGameComponent(props){
         };
     };
 
-    const lessonsBar = () => {
-        let myGame = document.getElementsByClassName('game');
+    const lessonsBar = (counter) => {
+        let myGame = document.getElementsByClassName('game'+counter);
         myGame[0].classList.toggle('hidden');
-        let myToggle = document.getElementsByClassName('toggle-icon-game');
+        let myToggle = document.getElementsByClassName('toggle-icon-game'+props.counter);
         for (let i = 0; i < myToggle.length; i++){
             myToggle[i].classList.toggle('hidden');
         }
@@ -78,16 +78,16 @@ function TableGameComponent(props){
 
     return(
         <div className='game-div'>
-            <h2 className='lesson-next' onClick={lessonsBar}>Table Game{downArrow}{upArrow}</h2>
-            <div className='game hidden'>
+            <h2 className='lesson-next' onClick={() => lessonsBar(props.counter)}>Table Game {props.topic}{downArrow}{upArrow}</h2>
+            <div className={'game'+props.counter + ' hidden'}>
                 <img className='field' alt='field' src={props.field}></img>
-                <img id='fishka1' className='my-player' src={player1} alt='player1' onMouseDown={playerControl}></img>
-                <img id='fishka2' className='my-player' src={player2} alt='player2' onMouseDown={playerControl}></img>
+                <img id={'fishka1'+props.topic} className='my-player' src={player1} alt='player1' onMouseDown={playerControl}></img>
+                <img id={'fishka2'+props.topic} className='my-player' src={player2} alt='player2' onMouseDown={playerControl}></img>
                 <div>
                     <button className='throw-button' onClick={throwDice}>Throw the cube</button>
                 </div>
-                <div className='cubes hidden'>
-                    <img className='cube' alt='cube' src={die1}/>
+                <div className={'cubes'+props.counter+ ' hidden'}>
+                    <img className='cube' src={die1}/>
                 </div>
             </div>
         </div>

@@ -4,20 +4,17 @@ import Homepage from './components/Homepage';
 import LessonsComponent from './components/LessonsComponent';
 import PictureTestComponent from './components/PicturesTestComponent';
 import HalloweenComponent from './components/HalloweenComponent';
-import TableGameComponent from './components/TableGameComponent';
+import TableGames from './components/TableGames';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import field_sonic from './images/field_sonic.jpg';
 import WordSearchComponent from './components/WordSearchComponent';
 
 
 function App() {
 
   const words = {
-    wordsToFind: ['Test', 'Hello', 'Bye', 'Good'],
-    letters: ['T', 'E', 'S', 'T', 'H', 'E', 'L', 'L', 'O'],
-    positions: [23,33,43,53, 91, 92, 93, 94, 95],
+    wordsToFind: ['Interesting','Lazy', 'Clever', 'Stupid', 'Kind', 'Cheerful', 'Brave', 'Handsome'],
     sizeX: 10,
-    sizeY: 10
+    sizeY: 15
   }
 
   return (
@@ -36,7 +33,7 @@ function App() {
               <NavDropdown.Item><Link to='/learning-cards' className='nav-item'>Learning Cards</Link></NavDropdown.Item>
               <NavDropdown.Item><Link to='/pictures-tests' className='nav-item'>Tests with Pictures</Link></NavDropdown.Item>
               <NavDropdown.Item><Link to='/halloween' className='nav-item'>Halloween</Link></NavDropdown.Item>
-              <NavDropdown.Item><Link to='/table-game' className='nav-item'>Table Game</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to='/table-games' className='nav-item'>Table Games</Link></NavDropdown.Item>
               <NavDropdown.Item><Link to='/words-searching' className='nav-item'>Words Searching</Link></NavDropdown.Item>
             </NavDropdown>
           </Nav>
@@ -53,7 +50,7 @@ function App() {
         <Route path='/learning-cards' element={<LessonsComponent />} />
         <Route path='/pictures-tests' element={<PictureTestComponent />} />
         <Route path='/halloween' element={<HalloweenComponent />} />
-        <Route path='/table-game' element={<TableGameComponent field={field_sonic}/>} />
+        <Route path='/table-games' element={<TableGames />} />
         <Route path='/words-searching' element={<WordSearchComponent words={words}/>} />
       </Routes>
       </div>

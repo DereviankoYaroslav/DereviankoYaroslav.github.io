@@ -789,6 +789,61 @@ function LessonsComponent(){
       ],
       lesson: 13};
 
+      const wordsToLearn14 = {
+        words: [
+        {eng: 'Pamper',
+        ukr: 'Балувати, тішити'},
+        {eng: 'Temper',
+        ukr: 'Характер, темперамент'},
+        {eng: 'Diapers',
+        ukr: 'Памперси, підгузки'},
+        {eng: 'Tadpoles',
+        ukr: 'Пуголовки'},
+        {eng: 'Threaten',
+        ukr: 'Погрожувати, загрожувати'},
+        {eng: 'Threat',
+        ukr: 'Загроза'},
+        {eng: 'Dummy',
+        ukr: 'Дурник'},
+        {eng: 'Bowels',
+        ukr: 'Кишки'},
+        {eng: 'Entrails',
+        ukr: 'Кишки'},
+        {eng: 'Hitchhike',
+        ukr: 'Автостоп'},
+        {eng: 'Molest',
+        ukr: 'Надокучати, приставати'},
+        {eng: 'Dumbbells',
+        ukr: 'Гантелі'},
+        {eng: 'Dull',
+        ukr: 'Тупий'},
+        {eng: 'Dumb',
+        ukr: 'Мовчазний, німий'},
+        {eng: 'Crowbar',
+        ukr: 'Лом'},
+        {eng: 'Bar',
+        ukr: 'Бар, '},
+        {eng: 'Strangle, smother',
+        ukr: 'Душити'},
+        {eng: 'Сhoke',
+        ukr: 'Задихатися, давитися'},
+        {eng: 'Grind',
+        ukr: 'Молоти, кришити'},
+        {eng: 'Deed',
+        ukr: 'Вчинок'},
+        {eng: 'Expel',
+        ukr: 'Виганяти, виключати'},
+        {eng: 'Condone',
+        ukr: 'Виправдовувати'},
+        {eng: 'Theft',
+        ukr: 'Крадій'},
+        {eng: 'Soporific',
+        ukr: 'Снодійний'},
+        {eng: 'Snoop',
+        ukr: 'Підглядати, шпигувати'}
+      ],
+      lesson: 14};
+
     return(
         <div>
             <CardComponent words={wordsToLearn1}/>
@@ -804,6 +859,7 @@ function LessonsComponent(){
             <CardComponent words={wordsToLearn11}/>
             <CardComponent words={wordsToLearn12}/>
             <CardComponent words={wordsToLearn13}/>
+            <CardComponent words={wordsToLearn14}/>
         </div>
     );
 }
