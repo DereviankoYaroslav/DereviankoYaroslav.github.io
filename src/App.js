@@ -12,9 +12,9 @@ import WordSearchComponent from './components/WordSearchComponent';
 function App() {
 
   const words = {
-    wordsToFind: ['Interesting','Lazy', 'Clever', 'Stupid', 'Kind', 'Cheerful', 'Brave', 'Handsome'],
-    sizeX: 10,
-    sizeY: 15
+    wordsToFind: ['Table','Cutting_Board', 'Refrigerator', 'Freezer', 'Paper_Towel', 'Microwave_Oven', 'Dishwasher', 'Sink', 'Chair', 'Oven', 'Wastebin', 'Toaster', 'Cupboard'],
+    sizeX: 20,
+    sizeY: 20
   }
 
   return (

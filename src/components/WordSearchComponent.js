@@ -13,7 +13,7 @@ function WordSearchComponent(props){
     const [numbers, setNumbers] = useState([]);
 
     const fillTheField = () => {
-        let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '_'];
         let field = document.getElementsByClassName('word-letters');
         for (let i = 0; i < props.words.sizeY; i++){
             let myInsideStart = `<div class='words-row col'>`;
@@ -50,6 +50,12 @@ function WordSearchComponent(props){
             }
             else if (firstIndex>((props.words.sizeX*props.words.sizeY)-element.length)){
                 firstIndex -= element.length;
+                console.log('stupid first index', firstIndex);
+                do {
+                    firstIndex--;
+                    console.log(firstIndex)
+                }
+                while ((((firstIndex) % props.words.sizeX) > props.words.sizeX-element.length));
                 innerNumb[0] = firstIndex;
                 console.log(firstIndex)
                 for(let k = 1; k < element.length; k++){
@@ -58,8 +64,13 @@ function WordSearchComponent(props){
                 }
             }
             else {
+                console.log('stupid first index', firstIndex);
+                do {
+                    firstIndex--;
+                    console.log(firstIndex)
+                }
+                while ((((firstIndex) % props.words.sizeX) > props.words.sizeX-element.length));
                 innerNumb[0] = firstIndex;
-                console.log(firstIndex)
                 for(let k = 1; k < element.length; k++){
                     firstIndex+=1;
                     innerNumb[k] = firstIndex;

@@ -844,6 +844,37 @@ function LessonsComponent(){
       ],
       lesson: 14};
 
+      const wordsToLearn15 = {
+        words: [
+        {eng: 'Infest',
+        ukr: 'Заражати'},
+        {eng: 'Perish',
+        ukr: 'Гинути, здихати'},
+        {eng: 'Folk',
+        ukr: 'Народ, народний'},
+        {eng: 'Folks',
+        ukr: 'Люди, близькі'},
+        {eng: 'Bury',
+        ukr: 'Закопувати, хоронити'},
+        {eng: 'Coffin',
+        ukr: 'Гроб'},
+        {eng: 'Casket',
+        ukr: 'Гроб, шкатулка'},
+        {eng: 'Tinge',
+        ukr: 'Присмак, відтінок'},
+        {eng: 'Conjure',
+        ukr: 'Чаклувати, заклинати'},
+        {eng: 'Agile',
+        ukr: 'Гнучкий'},
+        {eng: 'Awkward',
+        ukr: 'Незграбний, незручний'},
+        {eng: 'Clumsy',
+        ukr: 'Незграбний, безтактний'},
+        {eng: 'Guerilla',
+        ukr: 'Партизан, партизанський'}
+      ],
+      lesson: 15};
+
     return(
         <div>
             <CardComponent words={wordsToLearn1}/>
@@ -860,6 +891,7 @@ function LessonsComponent(){
             <CardComponent words={wordsToLearn12}/>
             <CardComponent words={wordsToLearn13}/>
             <CardComponent words={wordsToLearn14}/>
+            <CardComponent words={wordsToLearn15}/>
         </div>
     );
 }
