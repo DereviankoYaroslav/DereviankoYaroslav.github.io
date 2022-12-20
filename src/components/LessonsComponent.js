@@ -874,6 +874,7 @@ function LessonsComponent(){
         ukr: 'Партизан, партизанський'}
       ],
       lesson: 15};
+      
 
     return(
         <div>

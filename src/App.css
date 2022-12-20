@@ -396,8 +396,8 @@ h3 {
 }
 
 .learning-cards {
-  height: 500px;
-  opacity: 0;
+  /*   opacity: 0; */
+  max-height: 500px;
 }
 
 .shown {
@@ -409,7 +409,9 @@ h3 {
 }
 
 .home-card {
-  max-height: 100vh;
+  height: fit-content;
+  align-items: center;
+  max-height: 480px;
   border-radius: 20px;
   background-color: #132a58c6;
 }
@@ -420,14 +422,14 @@ h3 {
 
 .home-card-body {
   max-height: 100%;
-  height: auto;
+  height: fit-content;
 }
 
 .menu-cards {
+  background-color: #132a58c6;
+  height: fit-content;
+  max-height: 500px;
+  margin-top: 50px;
   width: 100%;
-  position: fixed;
   left: 0;
-  top: 70px;
-  bottom: 70px;
-  max-height: 100%;
 }
