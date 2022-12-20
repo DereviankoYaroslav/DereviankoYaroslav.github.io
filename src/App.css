@@ -40,13 +40,12 @@
 }
 
 body {
-  background:rgb(255, 200, 0);
+  background: rgb(255, 200, 0);
 }
-
 
 /* ---- Card Component ---- */
 
-.my-auto{
+.my-auto {
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -58,13 +57,13 @@ body {
 }
 
 .child {
-  width: 99%; 
+  width: 99%;
   height: auto;
   position: relative;
   margin-top: 20px;
 }
 
-.my-card{
+.my-card {
   border-radius: 20px;
   background-color: #132a58c6;
 }
@@ -73,7 +72,7 @@ body {
   cursor: pointer;
 }
 
-.card-body{
+.card-body {
   width: 100%;
   margin-top: 10%;
   height: 200px;
@@ -101,12 +100,12 @@ body {
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-a.nav-item{
+a.nav-item {
   color: aliceblue;
 }
 
 a.dropdown-item:hover {
-  background-color:rgba(255, 200, 0, 0.305);
+  background-color: rgba(255, 200, 0, 0.305);
 }
 
 .nav {
@@ -128,11 +127,11 @@ a.dropdown-item:hover {
   background-color: #414245fc;
 }
 
-.logo{
+.logo {
   text-decoration: none !important;
 }
 
-.nav-item{
+.nav-item {
   text-decoration: none !important;
 }
 
@@ -180,7 +179,6 @@ a.dropdown-item:hover {
   width: 100%;
 }
 
-
 /* -------- */
 
 /* ---- Footer ---- */
@@ -193,23 +191,23 @@ a.dropdown-item:hover {
   justify-content: center;
   background-color: #414245fc;
   display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-    width: 100%;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  width: 100%;
 }
 
 /* -------- */
 
 /* ---- Pages Content ---- */
 
-.welcome-page{
+.welcome-page {
   height: 100vh;
+  height: 5000px;
 }
-
 
 .content {
   margin-top: 25px;
@@ -244,7 +242,7 @@ a.dropdown-item:hover {
 
 /* ---- Images Cards ----  */
 
-.card-img-body{
+.card-img-body {
   width: 100%;
   margin-top: 10%;
   height: auto;
@@ -270,7 +268,7 @@ a.dropdown-item:hover {
   font-size: 20px;
 }
 
-.variant:hover{
+.variant:hover {
   cursor: pointer;
 }
 
@@ -282,7 +280,7 @@ a.dropdown-item:hover {
 
 /* ---- Halloween ---- */
 
-.halloween-tests{
+.halloween-tests {
   background-color: #ffffffc6;
   border-radius: 10px;
   padding: 10px;
@@ -317,23 +315,24 @@ a.dropdown-item:hover {
   width: auto;
 }
 
-.halloween h2, h3 {
-  color:#ff9500
+.halloween h2,
+h3 {
+  color: #ff9500;
 }
 
 .throw-button {
   display: inline;
   margin-top: 25px;
-  background-color:#ff950000;
-  color:#000000;
+  background-color: #ff950000;
+  color: #000000;
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
   border: solid 4px #000000;
 }
 
-.halloween .throw-button{
-  color:#ff9500;
+.halloween .throw-button {
+  color: #ff9500;
   border: solid 4px #ff9500;
 }
 
@@ -349,11 +348,11 @@ a.dropdown-item:hover {
 
 /* ---- Words Searching ---- */
 
-.words-field{
+.words-field {
   margin-top: 15px;
 }
 
-.words-row{
+.words-row {
   display: flex;
   /* justify-content: space-between; */
   justify-content: center;
@@ -370,23 +369,24 @@ a.dropdown-item:hover {
   background-color: #132a58c6;
 }
 
-.letter:hover{
+.letter:hover {
   cursor: pointer;
 }
 
-.letter-pushed{
+.letter-pushed {
   background-color: #1471fc;
 }
 
-.words-search h2, h3 {
-  color:#000000
+.words-search h2,
+h3 {
+  color: #000000;
 }
 
-.choosen-words{
+.choosen-words {
   margin-top: 25px;
 }
 
-.check{
+.check {
   margin-top: 15px;
   border-radius: 5px;
   border: none;
@@ -395,6 +395,39 @@ a.dropdown-item:hover {
   font-weight: bold;
 }
 
+.learning-cards {
+  height: 500px;
+  opacity: 0;
+}
 
+.shown {
+  left: 0;
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
 
+.home-card {
+  max-height: 100vh;
+  border-radius: 20px;
+  background-color: #132a58c6;
+}
 
+.home-card:hover {
+  cursor: pointer;
+}
+
+.home-card-body {
+  max-height: 100%;
+  height: auto;
+}
+
+.menu-cards {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 70px;
+  bottom: 70px;
+  max-height: 100%;
+}

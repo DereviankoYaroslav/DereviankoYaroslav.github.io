@@ -40,11 +40,6 @@ function App() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-      {/* <nav className='nav'>
-        <Link to='/' className='nav-item'>Homepage</Link>
-        <Link to='/learning-cards' className='nav-item'>Learning Cards</Link>
-        <Link to='/pictures-tests' className='nav-item'>Tests with Pictures</Link>
-      </nav> */}
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/learning-cards' element={<LessonsComponent />} />

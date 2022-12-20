@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown, faArrowLeft, faArrowRight, faChevronDown, faChevronUp, faShuffle} from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faArrowRight, faChevronDown, faChevronUp, faShuffle} from '@fortawesome/free-solid-svg-icons'
 
 function CardComponent(props){
 
@@ -32,16 +32,6 @@ function CardComponent(props){
             setContent(props.words.words[counter].ukr);
         }
     };
-
-    /* function shuffle() {
-        props.words.sort((a, b) => 0.5 - Math.random());
-        console.log(props.words);
-        if (check === true) {
-            setContent(props.words[counter].eng);
-        } else {
-            setContent(props.words[counter].ukr);
-        }
-    } */
 
     const minusHandler = () => {
         let minus;

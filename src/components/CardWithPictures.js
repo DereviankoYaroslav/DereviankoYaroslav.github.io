@@ -39,16 +39,6 @@ function CardWithPictures(props){
         variantsShuffle(counter);
     };
 
-    /* function shuffle() {
-        props.words.sort((a, b) => 0.5 - Math.random());
-        console.log(props.words);
-        if (check === true) {
-            setContent(props.words[counter].eng);
-        } else {
-            setContent(props.words[counter].ukr);
-        }
-    } */
-
     const minusHandler = () => {
         let minus;
         let whitening = document.getElementsByClassName('variant');
@@ -91,15 +81,6 @@ function CardWithPictures(props){
         }
         variantsShuffle(plus);
     };
-
-/*     const clickHandler = () => {
-        setCheck(!check);
-        if (check === false) {
-            setContent(props.words.words[counter].eng);
-        } else {
-            setContent(props.words.words[counter].ukr);
-        }
-    }; */
 
     const lessonsBar = (id) => {
         console.log(id);
@@ -160,7 +141,6 @@ function CardWithPictures(props){
             <div className='center-card child hidden' id={props.words.topic.toLowerCase().split(' ').join('-')}>
                 <Row xs='12' className='justify-content-center text-center'>
                     <Col md='2'></Col>
-                    {/* <Col md='1' xs='2' className='my-auto'><div className='arrow' onClick={minusHandler}>{arrowLeft}</div></Col> */}
                     <Col md='6' xs='6' className='align-items-center'>
                         <Card className='my-card'>
                             <CardBody className='card-img-body'>
@@ -168,7 +148,6 @@ function CardWithPictures(props){
                             </CardBody>
                         </Card>
                     </Col>
-                    {/*  <Col md='1' xs='2' className='align-items-center my-auto'><div className='arrow' onClick={plusHandler}>{arrowRight}</div></Col> */}
                     <Col md='2'></Col>
                 </Row>
                 <Row>
